@@ -1,5 +1,6 @@
 import { DataSource } from "typeorm";
-import { User } from "../entities/User.entities";
+import { User } from "../entities/User.entity";
+import { Auth } from "../entities/Auth.entity";
 import {
   TYPE_DB,
   HOST_DB,
@@ -16,7 +17,7 @@ export const AppDataSource = new DataSource({
   password: PASSWORD_DB,
   port: +PORT_DB,
   database: NAME_DB,
-  entities: [User],
+  entities: [User, Auth],
   logging: true,
   synchronize: true,
 });

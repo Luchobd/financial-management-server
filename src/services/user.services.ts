@@ -1,4 +1,4 @@
-import { User } from "../entities/User.entities";
+import { User } from "../entities/User.entity";
 import { CreateUser, UpdateUser } from "../interfaces/user.interface";
 
 export const createUserService = async ({
