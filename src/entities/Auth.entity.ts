@@ -12,25 +12,16 @@ export class Auth extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({
-    nullable: false,
-  })
+  @Column({ nullable: false })
   fullName: string;
 
-  @Column({
-    nullable: false,
-    unique: true,
-  })
+  @Column({ nullable: false, unique: true })
   email: string;
 
-  @Column({
-    nullable: false,
-  })
+  @Column({ nullable: false })
   password: string;
 
-  @Column({
-    default: true,
-  })
+  @Column({ default: true })
   active: boolean;
 
   @CreateDateColumn()
