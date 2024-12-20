@@ -5,7 +5,6 @@ import { ErrorMessages } from "../errors/errorMessages";
 export const registerController = async (req: Request, res: Response) => {
   try {
     const { body } = req;
-    console.log("body: ", body);
 
     const user = await register(body);
 
@@ -14,7 +13,6 @@ export const registerController = async (req: Request, res: Response) => {
       user,
     });
   } catch (error) {
-    console.log("ERROR: ", error);
     ErrorMessages(error, res);
   }
 };
